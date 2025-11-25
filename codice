@@ -1,0 +1,30 @@
+#define sensore A0
+#define ledR 13
+#define ledv 12
+#define max 32
+void setup ()
+pinMode (ledR, OUTPUT) ; pinMode (ledV, OUTPUT) ;
+Serial. begin (9600);
+)
+float temp() {
+float temp=0.0;
+int val=0;
+int nread=5;
+float somma=0.0;
+for (int i=0; i‹nread; i++) {
+val = analogRead (sensore);
+temp= ( (val *0.00488)-0.5)/0.01; somma+=tempi
+return (somma/nread) ;
+void loop ()
+float temperatura-temp () ;
+if (temperatura>max)
+{
+digitalwrite (ledR, HIGH) ; digitalWrite (ledV, LOW) ;
+else (
+digitalWrite (ledV, HIGH) ; digitalWrite (ledR, LOW);
+Serial.print ("La temperatura:
+Serial.printin (temperatura, 1);
+");
+delay (1000);
+              
+ }
